@@ -1,7 +1,6 @@
 const cursor = document.getElementById("cursor");
 const starsContainer = document.getElementById("stars-container");
 
-// Add stars randomly on the screen
 function createStars() {
     const maxStars = 32;
 
@@ -17,13 +16,11 @@ function createStars() {
 
 createStars();
 
-// Cursor movement effect
 document.addEventListener("mousemove", (e) => {
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
 });
 
-// Clickable hover effect
 document.querySelectorAll(".clickable").forEach((item) => {
     item.addEventListener("mouseenter", () => {
         cursor.classList.add("fill");
@@ -33,7 +30,6 @@ document.querySelectorAll(".clickable").forEach((item) => {
     });
 });
 
-// Back Button and Team Cards Hover Effect
 document.querySelectorAll('.clickable').forEach((element) => {
     element.addEventListener('mouseenter', () => cursor.classList.add('fill'));
     element.addEventListener('mouseleave', () => cursor.classList.remove('fill'));
