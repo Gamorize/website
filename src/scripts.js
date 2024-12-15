@@ -37,6 +37,7 @@ document.querySelectorAll('.clickable').forEach((element) => {
 
 if ('ontouchstart' in window || navigator.maxTouchPoints) {
     document.getElementById('cursor').style.display = 'none';
+    document.body.style.overflowY = 'auto'; // Ensure scrolling works on touch devices
 } else {
     document.addEventListener('mousemove', (e) => {
         cursor.style.top = `${e.clientY}px`;
